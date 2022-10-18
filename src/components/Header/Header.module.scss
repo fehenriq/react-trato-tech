@@ -21,7 +21,7 @@
   grid-template-areas: 'texto imagem';
   grid-template-columns: 1fr 2fr;
   justify-content: space-between;
-  gap: 30px;
+  gap: 300px;
 
   @media(max-width: $tablet) {
     gap: 20px;
