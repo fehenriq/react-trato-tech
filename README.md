@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Trato Tech
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+E-commerce da Trato Tech
 
-## Available Scripts
+## 🔨 Funcionalidades do projeto
 
-In the project directory, you can run:
+Foi criado 3 páginas [home, categorias e carrinho]
 
-### `yarn start`
+> ### Home
+Onde é exibido a pagina padrão [navbar e footer] e uma lista de categorias onde podemos acessar as outras páginas  
+No navbar temos o ícone da loja, um link da página home, um campo de busca que funciona em todas as páginas e o ícone que nos leva até o carrinho
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> ### Categorias
+Quando clicamos em uam categoria, somos redirecionamos para uma página onde contém somente os itens associados com a categoria acessada  
+Cada item possui uma foto, titulo, texto, valor, favorito e carrinho  
+Podemos clicar no ícone de coração fazendo com que o item seja adicionado aos itens favoritos  
+Também podemos clicar no ícone de carrinho para adicioná-lo.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> ### Carrinho
+A página de carrinho fica disponível no navbar, sendo possível acessar de qualquer página  
+Dentro do carrinho podemos visualizar o item, adicionar como favorito e também adicionar ou remover a quantidade desejada clicando nos ícones de + e -  
+A última parte é o botão de finalizar compra, que quando é clicado reseta o carrinho.
 
-### `yarn test`
+## ✔️ Técnicas e tecnologias utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `Javascript`
+- `React`
+- `React Router DOM`
+- `React Hooks`
+- `SCSS`
+- `Redux`
+- `UUID`
 
-### `yarn build`
+## 🛠️ Para abrir e rodar o projeto:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+É necessário ter instalado no PC:
+- `node.js`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Execute os comandos:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm install # ou yarn
+```
+```bash
+npm start # ou yarn start
+```
