@@ -14,6 +14,14 @@
   flex: 1;
   width: 70%;
 
+  .input-erro {
+    outline: 2px solid red;
+  }
+
+  .mensagem-erro {
+    color: red;
+  }
+
   input,
   select {
     border: none;
