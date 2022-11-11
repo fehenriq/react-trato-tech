@@ -1,12 +1,12 @@
 import automotivoThumb from 'assets/categorias/thumbnail/automotivo.png';
-import eletronicosThumb from 'assets/categorias/thumbnail/eletronicos.png';
-import escritorioThumb from 'assets/categorias/thumbnail/escritorio.png';
-import jogosThumb from 'assets/categorias/thumbnail/jogos.png';
-import somThumb from 'assets/categorias/thumbnail/som.png';
 import automotivoHeader from 'assets/categorias/header/automotivo.png';
+import eletronicosThumb from 'assets/categorias/thumbnail/eletronicos.png';
 import eletronicosHeader from 'assets/categorias/header/eletronicos.png';
+import escritorioThumb from 'assets/categorias/thumbnail/escritorio.png';
 import escritorioHeader from 'assets/categorias/header/escritorio.png';
+import jogosThumb from 'assets/categorias/thumbnail/jogos.png';
 import jogosHeader from 'assets/categorias/header/jogos.png';
+import somThumb from 'assets/categorias/thumbnail/som.png';
 import somHeader from 'assets/categorias/header/som.png';
 import { createSlice } from "@reduxjs/toolkit";
 

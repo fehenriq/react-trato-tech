@@ -29,7 +29,13 @@
   }
 
   &-imagem {
+    height: 160px;
+    width: 335px;
     margin: 0 auto;
+
+    img {
+      width: 100%;
+    }
   }
 
   &-info {
