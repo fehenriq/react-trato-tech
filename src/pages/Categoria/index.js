@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "components/Header";
 import { useSelector } from "react-redux";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import styles from './Categoria.module.scss'
 import Item from "components/Item";
 import Button from "components/Button";
