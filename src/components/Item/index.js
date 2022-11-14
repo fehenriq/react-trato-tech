@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Item.module.scss';
 import {
   AiOutlineHeart,
   AiFillHeart,
   AiFillMinusCircle,
   AiFillPlusCircle,
+  AiOutlineCheck,
+  AiFillEdit,
 } from 'react-icons/ai';
 import {
   FaCartPlus
 } from 'react-icons/fa';
-import { mudarFavorito } from 'store/reducers/itens';
+import { mudarFavorito, mudarItem } from 'store/reducers/itens';
 import { useDispatch, useSelector } from 'react-redux';
 import { mudarCarrinho, mudarQuantidade } from 'store/reducers/carrinho';
 import classNames from 'classnames';
+import Input from 'components/Input';
 
 const iconeProps = {
   size: 24,
@@ -36,6 +39,8 @@ export default function Item(props) {
     quantidade
   } = props;
 
+  const [modoDeEdicao, setModoDeEdicao] = useState(false);
+  const [novoTitulo, setNovoTitulo] = useState(titulo);
   const dispatch = useDispatch();
   const estaNoCarrinho = useSelector(state => state.carrinho.some(itemNoCarrinho => itemNoCarrinho.id === id));
 
@@ -47,6 +52,27 @@ export default function Item(props) {
     dispatch(mudarCarrinho(id));
   }
 
+  const componenteModoDeEdicao = <>
+    {modoDeEdicao
+      ? <AiOutlineCheck
+        {...iconeProps}
+        className={styles['item-acao']}
+        onClick={() => {
+          setModoDeEdicao(false);
+          dispatch(mudarItem({
+            id, 
+            item: { titulo: novoTitulo }
+          }));
+        }}
+      />
+      : <AiFillEdit
+        {...iconeProps}
+        className={styles['item-acao']}
+        onClick={() => setModoDeEdicao(true)}
+      />
+    }
+  </>
+
   return (
     <div className={classNames(styles.item, {
       [styles.itemNoCarrinho]: carrinho,
@@ -56,7 +82,13 @@ export default function Item(props) {
       </div>
       <div className={styles['item-descricao']}>
         <div className={styles['item-titulo']}>
-          <h2>{titulo}</h2>
+          {modoDeEdicao
+            ? <Input
+              value={novoTitulo}
+              onChange={evento => evento.target.value}
+            />
+            : <h2>{titulo}</h2>
+          }
           <p>{descricao}</p>
         </div>
         <div className={styles['item-info']}>
@@ -96,12 +128,17 @@ export default function Item(props) {
                   />
                 </div>
               )
-              : (<FaCartPlus
-                {...iconeProps}
-                color={estaNoCarrinho ? '#1875E8' : iconeProps.color}
-                className={styles['item-acao']}
-                onClick={resolverCarrinho}
-              />)
+              : (
+                <>
+                  <FaCartPlus
+                    {...iconeProps}
+                    color={estaNoCarrinho ? '#1875E8' : iconeProps.color}
+                    className={styles['item-acao']}
+                    onClick={resolverCarrinho}
+                  />
+                  {componenteModoDeEdicao}
+                </>
+              )
             }
           </div>
         </div>
