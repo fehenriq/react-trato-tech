@@ -40,7 +40,7 @@ export default function Item(props) {
   } = props;
 
   const [modoDeEdicao, setModoDeEdicao] = useState(false);
-  const [novoTitulo, setNovoTitulo] = useState(titulo);
+  const [novoTitulo] = useState(titulo);
   const dispatch = useDispatch();
   const estaNoCarrinho = useSelector(state => state.carrinho.some(itemNoCarrinho => itemNoCarrinho.id === id));
 
@@ -60,7 +60,7 @@ export default function Item(props) {
         onClick={() => {
           setModoDeEdicao(false);
           dispatch(mudarItem({
-            id, 
+            id,
             item: { titulo: novoTitulo }
           }));
         }}

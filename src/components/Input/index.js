@@ -1,5 +1,5 @@
-import React, { forwardRef } from 'react'
-import styles from './Input.module.scss'
+import { forwardRef } from 'react';
+import styles from './Input.module.scss';
 
 function Input({ value, onChange, ...outrosProps }, ref) {
   return (
@@ -13,4 +13,4 @@ function Input({ value, onChange, ...outrosProps }, ref) {
   )
 }
 
-export default forwardRef(Input)
+export default forwardRef(Input);
